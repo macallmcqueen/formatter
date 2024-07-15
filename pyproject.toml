@@ -34,7 +34,7 @@ indent-width = 4
 # Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
 # McCabe complexity (`C901`) by default.
 select = ["I", "PL", "E4", "E7", "E9", "F", "UP", "FURB", "RUF", "B", "DTZ", "D", "W505", "E501"]
-ignore = ["PLR6301", "PLR0913", "D212", "D203", "D300", "D205", "D200"]
+ignore = ["PLW1641", "PLR6301", "PLR0913", "D212", "D203", "D300", "D205", "D200", "E402"]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
@@ -66,10 +66,10 @@ allow-init-docstring = true
 arg-type-hints-in-docstring = false 
 check-return-types = false 
 skip-checking-short-docstrings = false 
-ignore-underscore-args = false
 quiet = true
+skip-checking-raises = true
 
 
 [tool.pylint.main]
 no-docstring-rgx = "__.*__"
-disable = ["C0302", "C0330", "R0902", "R0903", "R0904", "R0913", "W0703", "C0413", "W0707", "W1514", "R0201"]
+disable = ["C0302", "R0902", "R0903", "R0904", "R0913", "W0703", "C0413", "W0707", "W1514", "E1136"]
